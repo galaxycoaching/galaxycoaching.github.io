@@ -10,45 +10,120 @@
 
     <title>Galaxy Coaching Institute Patna</title>
     <style type="text/css">
+    /* -------------------------------- 
+    Primary style
+    -------------------------------- */
+    *, *::after, *::before {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    }
+    html{
+    scroll-behavior: smooth;
+    }
+    
+    .main{
+    overflow-x:hidden;
+    }
+    .navbar-toggler:hover{outline:none;}
     .bg-teal{
     background-color:teal;
     }
+    /*body div:only-child {*/
+    .main > div {
+    /*border:2px dotted red;*/
+    adding-top:60px;
+    
+    }
+    .main_sub{
+    width:100%;
+    height:100vh;
+    }
+    .main_sub_sub{
+    background:grey;
+    width:100%;
+    height:180px;
+    border:thick solid green;
+    }
+    .nav-item a{color:#fff !important;}
     </style>
   </head>
-  <body>
+  <body class="px-3" >
     
     
     
-    <nav class="navbar navbar-expand-md navbar-dark bg-teal">
+    <nav class="navbar navbar-expand-md navbar-dark bg-teal fixed-top">
     <a class="navbar-brand" href="#">Galaxy Coaching</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navContent">
     <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <li class="nav-item">
+    <a class="nav-link" href="#n1">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">About Us</a>
+    <a class="nav-link" href="#n2">About Us</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">Contact Us</a>
+    <a class="nav-link" href="#n3">Contact Us</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">About Developer</a>
+    <a class="nav-link" href="#n4">About Developer</a>
     </li>
     
     </ul>
     
     </div>
     </nav>
-
+    <div class="main" >
+    <div id="n1"  class="main_sub" >
+    <div class="main_sub_sub" >main sub sub
+    </div>
+    </div>
+    
+    <div id="n2"  class="main_sub" >
+    <div class="main_sub_sub" >main sub sub
+    </div>
+    </div>
+    
+    <div id="n3"  class="main_sub" >
+    <div class="main_sub_sub" >main sub sub
+    </div>
+    </div>
+    
+    <div id="n4"  class="main_sub" >
+    <div class="main_sub_sub" >main sub sub
+    </div>
+    </div>
+    <span>Name</span>
+    
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/35X9Py0/IMG-20191126-205016.jpg" alt="IMG-20191126-205016" border="0"></a>
+<img src="http://www.mediafire.com/view/un5cqmia0552dln/20180129_094543.png" >
+    
+    
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(()=>{
+	    $(".main, .nav-item").click(()=>{
+			$("#navContent").collapse('hide');
+		})
+	     
+	     var navHeight = $('nav').outerHeight();
+	     $('.main > div').css('padding-top',navHeight)
+	     alert(nH);
+    });
+    </script>
   </body>
 </html>
