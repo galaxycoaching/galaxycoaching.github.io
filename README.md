@@ -1,1 +1,0 @@
-# galaxycoaching.github.io
