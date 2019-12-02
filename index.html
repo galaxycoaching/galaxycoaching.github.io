@@ -89,7 +89,7 @@
 	    
 	    <div class="collapse navbar-collapse" id="navContent">
 		    <ul class="navbar-nav mr-auto">
-			    <li class="nav-item">
+			    <li class="nav-item active">
 				    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
 			    </li>
 			    <li class="nav-item">
@@ -211,41 +211,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     --><script type="text/javascript">
-    $(()=>{
-	    //menu collapse after clicking menu or other bpdy
-	    $(".pageWrap, .nav-item").click(()=>{
+	$(()=>{
+		//menu collapse after clicking menu or other bpdy
+		$(".pageWrap, .nav-item").click(()=>{
 			$("#navContent").collapse('hide');
 		})
-	     
-	     //set padding top of nav height
-	     $('.pageWrap').css('padding-top',$('nav').outerHeight());
-		 //$('section').css('padding-top',$('nav').outerHeight());
-		 
-		 //init
-		 wow = new WOW(
-		 {
-		 boxClass:     'wow',      // default
-		 animateClass: 'animated', // default
-		 offset:       120,          // default
-		 mobile:       true,       // default
-		 live:         true        // default
-		 }
-		 )
-		 wow.init();
-		 
-		 /*
-		 //way point with class
-		 var boxWrap = $(".contentBoxWrap");
-		 boxWrap.waypoint(function(direction){
-		    if(direction=='down'){
-		    $(this[0,'element']).css('padding-top',$('nav').outerHeight());
-		    }else{
-		    $(this[0,'element']).css('padding-top',0);
-		    }
-		    },{offset:0});
-		    */
-		    
-		    
+		
+		//set padding top of nav height
+		$('.pageWrap').css('padding-top',$('nav').outerHeight());
+		//$('section').css('padding-top',$('nav').outerHeight());
+		
+		//init
+		wow = new WOW({
+			boxClass:     'wow',      // default
+			animateClass: 'animated', // default
+			offset:       120,          // default
+			mobile:       true,       // default
+			live:         true        // default
+		})
+		wow.init();
+		
+		
+		
+		//var scrollLink = $('.scroll');
+		var scrollLink = $('.nav-link');
+		
+		// Smooth scrolling
+		scrollLink.click(function(e) {
+		e.preventDefault();
+			$('body,html').animate({
+				scrollTop: ($(this.hash).offset().top - 57 //$("nav").outerHeight()
+				)
+			}, 1000 );
+		});
+		
+		// Active link switching
+		$(window).scroll(function() {
+			var scrollbarLocation = $(this).scrollTop();
+			scrollLink.each(function() {
+				var sectionOffset = $(this.hash).offset().top - 57; //20;
+				if ( sectionOffset <= scrollbarLocation ) {
+					$(this).parent().addClass('active');
+					$(this).parent().siblings().removeClass('active');
+				}
+			})
+		})
+		
+	}); //jquery ready	
+    
+    
+    /*
+    //way point with class
+    var boxWrap = $(".contentBoxWrap");
+    boxWrap.waypoint(function(direction){
+    if(direction=='down'){
+    $(this[0,'element']).css('padding-top',$('nav').outerHeight());
+    }else{
+    $(this[0,'element']).css('padding-top',0);
+    }
+    },{offset:0});
+    */
+    
+    /*
     $('section').waypoint(function(direction) {
     var activeSection = $(this).next();
     var activeSection = $(this);
@@ -261,10 +288,9 @@
     console.log(activeSection);
     console.log(this.element.id);
     $("#navId").html(sectionId);
-    },{offset: $("nav").outerHeight()});
-});	
+    },{offset: $("nav").outerHeight()});*/
     
-    $('a[href*=\\#]:not([href=\\#])').click(function() {
+    /*$('a[href*=\\#]:not([href=\\#])').click(function() {
     $("#navContent").collapse('hide');
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
     || location.hostname == this.hostname) {
@@ -274,12 +300,14 @@
     if (target.length) {
     $('html,body').animate({
     scrollTop: target.offset().top - 56 //(target.height() / 5)
-   }, 600);
-   
+    }, 600);
+    
     return false;
     }
     }
     });
+    */
+    
     </script>
   </body>
 </html>
