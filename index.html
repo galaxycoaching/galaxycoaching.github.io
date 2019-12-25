@@ -14,16 +14,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	
-	<!--<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
-
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
-	<script sex="https://cdn.jsdelivr.net/npm/universal-parallax@1.3.2/dist/universal-parallax.min.js"></script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.min.js"></script>
 	
 	<title>Galaxy Coaching Institute Patna</title>
@@ -67,6 +65,12 @@
     }
     wow{
     visibility:hidden;
+    }
+    [data-aos] {
+    visibility: hidden;
+    }
+    [data-aos].animated {
+    visibility: visible;
     }
     
     /*
@@ -144,11 +148,14 @@
     .delay-4s5{animation-delay:4.5s;}
     .delay-5s5{animation-delay:5.5s;}
     
+    .pageWrap{background:rgba(255,255,255,.7);}
+    .pageWrap .row>div>.container{background:rgba(255,255,255,.7);}
+    
     </style>
   </head>
   <body data-aos="fadeIn delay-0s1">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-	    <a class="navbar-brand" href="./" data-aos="pulse infinite delay-0s3" >
+	    <a class="navbar-brand" href="./" data-aos="fadeInRight delay-0s3" >
 		    <img src="https://i.ibb.co/3C2L76s/gl3.jpg" >
 	    </a>
 	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -158,7 +165,7 @@
 	    <div class="collapse navbar-collapse p-0 pt-2" id="navContent">
 		    <ul class="navbar-nav p-0 ml-auto">
 			    <li class="nav-item active">
-				    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+				    <a class="nav-link" href="#welcome">Welcome <span class="sr-only">(current)</span></a>
 			    </li>
 			    <li class="nav-item">
 				    <a class="nav-link" href="#about">About Us</a>
@@ -275,13 +282,13 @@
     -->
     <div class="pageWrap" >
     
-    <section id="home" data-aos="fadeIn" class="contentBoxWrap" >
+    <section id="welcome" data-aos="fadeIn" class="contentBoxWrap" >
     <div class="contentBox p-3" >
-    <p class="h3 p-2 bg-teal text-center text-light rounded " >Home</p>
+    <p class="h3 p-2 bg-teal text-center text-light rounded " >Welcome</p>
     
     <div class="row" >
     <div class="col-md-6 p-3" >
-    <div class="container px-4 py-2 text-center border rounded" data-aos="fadeIn">
+    <div class="container px-4 py-2 text-center rounded" data-aos="fadeIn">
     <p class="h4 p-2">Heading</p>
     <p class="content delay-0s3" data-aos="fadeIn">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
@@ -289,7 +296,7 @@
     </div>
     </div>
     <div class="col-md-6 p-3" >
-    <div class="container px-4 py-2 text-center border rounded" data-aos="fadeIn" data-aos-delay="0">
+    <div class="container px-4 py-2 text-center  rounded" data-aos="fadeIn" data-aos-delay="0">
     <p class="h4 p-2" >Heading</p>
     <p class="content" data-aos="fadeIn delay-0s3">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
@@ -306,7 +313,7 @@
     <p class="h3 p-2 bg-teal text-center text-light rounded " >About Us</p>
     <div class="row" >
     <div class="col-md-6 p-3" >
-    <div class="container px-4 py-2 text-center border rounded " data-aos="fadeIn" data-aos-delay="300">
+    <div class="container px-4 py-2 text-center  rounded " data-aos="fadeIn" data-aos-delay="300">
     <p class="h4 p-2" >Heading</p>
     <p class="content" data-aos="fadeIn delay-0s3">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
@@ -314,7 +321,7 @@
     </div>
     </div>
     <div class="col-md-6 p-3" >
-    <div class="container px-4 py-2 text-center border rounded" data-aos="fadeIn" data-aos-delay="0">
+    <div class="container px-4 py-2 text-center  rounded" data-aos="fadeIn" data-aos-delay="0">
     <p class="h4 p-2" >Heading</p>
     <p class="content" data-aos="fadeIn delay-0s3">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
@@ -330,7 +337,7 @@
     <p class="h3 p-2 bg-teal text-center text-light rounded " >Contact Us</p>
     <div class="row" >
     <div class="col-md-6 p-3" >
-    <div class="container px-4 py-2 text-center border rounded " data-aos="fadeIn" data-aos-delay="300">
+    <div class="container px-4 py-2 text-center  rounded " data-aos="fadeIn" data-aos-delay="300">
     <p class="h4 p-2" >Heading</p>
     <p class="content" data-aos="fadeIn delay-0s3">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
@@ -338,7 +345,7 @@
     </div>
     </div>
     <div class="col-md-6 p-3" >
-    <div class="container px-4 py-2 text-center border rounded" data-aos="fadeIn" data-aos-delay="0">
+    <div class="container px-4 py-2 text-center  rounded" data-aos="fadeIn" data-aos-delay="0">
     <p class="h4 p-2" >Heading</p>
     <p class="content" data-aos="fadeIn delay-0s3">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
@@ -354,7 +361,7 @@
     <p class="h3 p-2 bg-teal text-center text-light rounded " >Developer</p>
     <div class="row" >
     <div class="col-md-6 p-3" >
-    <div class="container px-4 py-2 text-center border rounded " data-aos="fadeIn" data-aos-delay="300">
+    <div class="container px-4 py-2 text-center  rounded " data-aos="fadeIn" data-aos-delay="300">
     <p class="h4 p-2" >Heading</p>
     <p class="content" data-aos="fadeIn delay-0s3">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
@@ -362,7 +369,7 @@
     </div>
     </div>
     <div class="col-md-6 p-3" >
-    <div class="container px-4 py-2 text-center border rounded" data-aos="fadeIn" data-aos-delay="0">
+    <div class="container px-4 py-2 text-center  rounded" data-aos="fadeIn" data-aos-delay="0">
     <p class="h4 p-2" >Heading</p>
     <p class="content" data-aos="fadeIn delay-0s3">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
@@ -388,9 +395,9 @@
     -->
     <hr class="m-0 bg-half-black" >
     <div id="more-links" class="container py-3" >
-    <a href="#!" class="link" >Privacy Policy</a>
+    <!--<a href="#!" class="link" >Privacy Policy</a>-->
     <a href="#!" >Terms & Conditions</a>
-    <a href="#!" class="link" >Sitemap</a>
+    <!--<a href="#!" class="link" >Sitemap</a>-->
     
     </div>
     <div data-aos="fadeIn delay-0s3" data-aos-offset="0" class="copyright my-auto py-3 text-center " >
@@ -402,7 +409,13 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
-	$(()=>{
+		jQuery(document).ready(function() {
+		
+		/*
+		Fullscreen background
+		*/
+		$.backstretch("https://i.ibb.co/wszxqm0/coaching-class-3.jpg");
+		
 		//menu collapse after clicking menu or other bpdy
 		$(".pageWrap, .nav-item").click(()=>{
 			$("#navContent").collapse('hide');
@@ -456,84 +469,19 @@
     animatedClassName: 'animated'
     });
     
-    /*/
-    // You can also pass an optional settings object
-    // below listed default settings
-    AOS.init({
-    // Global settings:
-    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-    initClassName: false, //'aos-init', // class applied after initialization
-    animatedClassName: 'animated', //'aos-animate', // class applied on animation
-    useClassNames: true,  //false, // if true, will add content of `data-aos` as classes on scroll
-    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-    
-    
-    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 120, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 400, // values from 0 to 3000, with step 50ms
-    easing: 'ease', // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
-    mirror: true, //false, // whether elements should animate out while scrolling past them
-    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-    
-    }); 
-    */
+   
     
     
     
-    
-    /*
     //way point with class
-    var boxWrap = $(".contentBoxWrap");
-    boxWrap.waypoint(function(direction){
-    if(direction=='down'){
-    $(this[0,'element']).css('padding-top',$('nav').outerHeight());
-    }else{
-    $(this[0,'element']).css('padding-top',0);
-    }
+    //var boxWrap = $(".contentBoxWrap");
+    $("#welcome .container:eq(0)").waypoint(function(direction){
+	    if(direction=='up'){
+	    //when scroll reverse up to top 
+		    //alert("up")
+	    }
     },{offset:0});
-    */
-    
-    /*
-    $('section').waypoint(function(direction) {
-    var activeSection = $(this).next();
-    var activeSection = $(this);
-    if(direction === 'down'){
-    activeSection = $(this).next();
-    }
-    const navHeight = $('nav').outerHeight();
-    activeSection = $(this);
-    var sectionId   = this.element.id; //activeSection.attr('id');
-    $('ul li').removeClass('active');
-    //$('ul li.' + sectionId).addClass('active');
-    $('a[href*=\\#'+sectionId+']').parent().addClass('active');
-    console.log(activeSection);
-    console.log(this.element.id);
-    $("#navId").html(sectionId);
-    },{offset: $("nav").outerHeight()});*/
-    
-    /*$('a[href*=\\#]:not([href=\\#])').click(function() {
-    $("#navContent").collapse('hide');
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-    || location.hostname == this.hostname) {
-    
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-    if (target.length) {
-    $('html,body').animate({
-    scrollTop: target.offset().top - 56 //(target.height() / 5)
-    }, 600);
-    
-    return false;
-    }
-    }
-    });
-    */
-    
+   
     </script>
   </body>
 </html>
